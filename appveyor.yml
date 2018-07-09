@@ -7,8 +7,8 @@ image:
   # - Visual Studio 2015
 
 install:
-  - sh: rvm install "ruby-2.6.0dev"
-  - sh: rvm use     "ruby-2.6.0dev"
+#  - sh: rvm install "ruby-2.6.0dev"
+  - sh: rvm use "ruby-2.6.0dev"
   
 
 test_script:
