@@ -7,12 +7,10 @@ image:
   # - Visual Studio 2015
 
 install:
-  - sh: |
-      [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-      rvm reinstall ruby-head
-      rvm use ruby-head
+  - sh: rvm use ruby-head
 
 test_script:
-  - ruby --version
-  - ruby -ropenssl -e "puts OpenSSL::OPENSSL_VERSION"
-  - ruby -ropenssl -e "puts OpenSSL::OPENSSL_LIBRARY_VERSION"
+  - sh: ruby --version
+      ruby -ropenssl -e "puts OpenSSL::OPENSSL_VERSION"
+      ruby -ropenssl -e "puts OpenSSL::OPENSSL_LIBRARY_VERSION"
+      ruby -ropenssl -e 'puts "#{OpenSSL::OPENSSL_LIBRARY_VERSION}\n#{OpenSSL::OPENSSL_LIBRARY_VERSION}"'
