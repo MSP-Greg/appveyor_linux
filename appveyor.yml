@@ -10,7 +10,6 @@ install:
   - sh: rvm use ruby-head
 
 test_script:
-  - sh: ruby --version
-      ruby -ropenssl -e "puts OpenSSL::OPENSSL_VERSION"
-      ruby -ropenssl -e "puts OpenSSL::OPENSSL_LIBRARY_VERSION"
-      ruby -ropenssl -e 'puts "#{OpenSSL::OPENSSL_LIBRARY_VERSION}\n#{OpenSSL::OPENSSL_LIBRARY_VERSION}"'
+  - sh: |
+      ruby --version
+      ruby -ropenssl -e "puts OpenSSL::OPENSSL_VERSION, OpenSSL::OPENSSL_LIBRARY_VERSION"
