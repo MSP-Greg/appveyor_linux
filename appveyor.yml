@@ -1,0 +1,14 @@
+---
+build: off
+deploy: off
+
+image:
+  - Ubuntu
+  # - Visual Studio 2015
+
+stack: Ruby 2.6.0dev
+
+test_script:
+  - ruby --version
+  - ruby -ropenssl -e "puts OpenSSL::OPENSSL_VERSION"
+  - ruby -ropenssl -e "puts OpenSSL::OPENSSL_LIBRARY_VERSION"
