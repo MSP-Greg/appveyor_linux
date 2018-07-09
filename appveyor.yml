@@ -7,9 +7,10 @@ image:
   # - Visual Studio 2015
 
 install:
-#  - sh: rvm install "ruby-2.6.0dev"
-  - sh: rvm use "ruby-head"
-  
+  - sh: |
+      [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" &&
+      rvm use "ruby-head"
+
 
 test_script:
   - ruby --version
