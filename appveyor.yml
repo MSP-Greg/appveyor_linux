@@ -9,9 +9,8 @@ image:
 install:
   - sh: |
       [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-      rvm install "ruby-head"
-      rvm use "ruby-head"
-
+      rvm reinstall ruby-head
+      rvm use ruby-head
 
 test_script:
   - ruby --version
