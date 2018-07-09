@@ -6,6 +6,9 @@ image:
   - Ubuntu
   # - Visual Studio 2015
 
+install:
+  - sh: rvm install "ruby-2.6.0dev
+  
 stack: Ruby 2.6.0dev
 
 test_script:
